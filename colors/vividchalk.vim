@@ -100,18 +100,26 @@ highlight StatusLineNC  guifg=#444444 guibg=#aaaaaa gui=none ctermfg=Black cterm
 
 highlight Ignore        ctermfg=Black
 highlight WildMenu      guifg=Black   guibg=#ffff00 gui=bold ctermfg=Black ctermbg=Yellow cterm=bold
-highlight Cursor        guifg=Black guibg=White ctermfg=Black ctermbg=White
-call s:hibg("ColorColumn","#333333","DarkGrey",81)
-call s:hibg("CursorLine","#333333","DarkGrey",81)
+highlight Cursor        guifg=Black guibg=White ctermfg=White ctermbg=Red
+call s:hibg("Cursor",      "#ff0000","Red", 196)
+call s:hifg("Cursor",      "#00ffff","White", 231)
+highlight iCursor        guifg=Black guibg=White ctermfg=White ctermbg=Red
+call s:hibg("iCursor",     "#ff0000","Red", 196)
+call s:hifg("iCursor",     "#00ffff","White", 231)
+call s:hibg("ColorColumn", "#333333","DarkGrey",81)
+call s:hibg("CursorLine",  "#333333","DarkGrey",81)
 call s:hibg("CursorColumn","#333333","DarkGrey",81)
 highlight NonText       guifg=#404040 ctermfg=8
 highlight SpecialKey    guifg=#404040 ctermfg=8
 highlight Directory     none
 high link Directory     Identifier
 highlight ErrorMsg      guibg=Red ctermbg=DarkRed guifg=NONE ctermfg=NONE
-highlight Search        guifg=NONE ctermfg=NONE gui=none cterm=none
-call s:hibg("Search"    ,"#555555","DarkBlue",81)
-highlight IncSearch     guifg=White guibg=Black ctermfg=White ctermbg=Black
+highlight Search        guifg=NONE ctermfg=Black gui=none ctermbg=Yellow
+call s:hibg("Search"    ,"#555555","Yellow",72)
+call s:hifg("Search"    ,"#000000","DarkBlue",81)
+highlight IncSearch     guifg=Black guibg=White ctermfg=Black ctermbg=White
+call s:hibg("IncSearch" ,"#ffffff","White",231)
+call s:hifg("IncSearch" ,"#000000","DarkBlue",81)
 highlight MoreMsg       guifg=#00AA00 ctermfg=Green
 highlight LineNr        guifg=#DDEEFF ctermfg=White
 call s:hibg("LineNr"    ,"#222222","DarkBlue",80)
